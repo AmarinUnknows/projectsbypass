@@ -9,13 +9,31 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
 	<link rel="stylesheet" href="styles.css" />
-	<meta property="og:title" content="Amarin Team" />
+	<meta property="og:title" content="Amarin Team X CPU" />
 	<meta property="og:description" content="Watch and enjoy videos by Amarin Team" />
 	<meta property="og:type" content="website" />
 	<meta property="og:image" content="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8Xw8AApEB4bJb3WkAAAAASUVORK5CYII=" />
 	<meta name="theme-color" content="#0f172a" />
+	<link rel="manifest" href="manifest.webmanifest" />
+	<link rel="icon" href="favicon.ico" />
 </head>
 <body>
+	<div id="loader" role="status" aria-live="polite" aria-label="Loading" class="loader">
+		<div class="loader-inner">
+			<div class="loader-brand">Amarin Team X CPU</div>
+			<div class="progress" aria-hidden="true">
+				<div class="bar" id="progressBar"></div>
+			</div>
+			<p class="loader-text">Loading...</p>
+		</div>
+	</div>
+	<div class="parallax-layer" aria-hidden="true"></div>
+	<div class="orbs" aria-hidden="true">
+		<span class="orb orb-a"></span>
+		<span class="orb orb-b"></span>
+		<span class="orb orb-c"></span>
+	</div>
+	<div class="scroll-progress" aria-hidden="true"><div class="scroll-progress__bar" id="scrollProgress"></div></div>
 	<header class="site-header">
 		<div class="container">
 			<h1 class="brand">Amarin Team X CPU</h1>
@@ -27,7 +45,10 @@
 		<section class="videos">
 			<article class="video-card">
 				<div class="video-frame">
-					<iframe src="https://drive.google.com/file/d/1R1nq_G1wj7U_OBN6R6XfIZ9AVTCxa8CJ/preview" allow="autoplay" allowfullscreen loading="lazy" title="Video 1 - Amarin Team"></iframe>
+					<iframe src="https://drive.google.com/file/d/1R1nq_G1wj7U_OBN6R6XfIZ9AVTCxa8CJ/preview" allow="autoplay; fullscreen; encrypted-media" referrerpolicy="no-referrer-when-downgrade" allowfullscreen loading="lazy" title="Video 1 - Amarin Team X CPU"></iframe>
+					<div class="video-fallback">
+						<p>Having trouble loading? <a href="https://drive.google.com/file/d/1R1nq_G1wj7U_OBN6R6XfIZ9AVTCxa8CJ/view?usp=sharing&t=1" target="_blank" rel="noopener">Open in new tab</a></p>
+					</div>
 				</div>
 				<div class="video-info">
 					<h2 class="video-title">Video 1</h2>
@@ -36,7 +57,10 @@
 
 			<article class="video-card">
 				<div class="video-frame">
-					<iframe src="https://drive.google.com/file/d/1815KBkig2NuZ0VIgeDnLUQmhIjd321Hp/preview" allow="autoplay" allowfullscreen loading="lazy" title="Video 2 - Amarin Team"></iframe>
+					<iframe src="https://drive.google.com/file/d/1815KBkig2NuZ0VIgeDnLUQmhIjd321Hp/preview" allow="autoplay; fullscreen; encrypted-media" referrerpolicy="no-referrer-when-downgrade" allowfullscreen loading="lazy" title="Video 2 - Amarin Team X CPU"></iframe>
+					<div class="video-fallback">
+						<p>Having trouble loading? <a href="https://drive.google.com/file/d/1815KBkig2NuZ0VIgeDnLUQmhIjd321Hp/view?usp=sharing" target="_blank" rel="noopener">Open in new tab</a></p>
+					</div>
 				</div>
 				<div class="video-info">
 					<h2 class="video-title">Video 2</h2>
@@ -48,11 +72,22 @@
 
 	<footer class="site-footer">
 		<div class="container">
-			<p>Credit : <strong>Amarin Team X CPU</strong></p>
+			<p>Credit: <strong>Amarin Team X CPU</strong></p>
 		</div>
 	</footer>
 
+	<!-- Image Popup Modal -->
+	<div class="modal" id="promoModal" aria-hidden="true" role="dialog" aria-label="Promotion">
+		<div class="modal-backdrop" data-close></div>
+		<div class="modal-dialog" role="document">
+			<button class="modal-close" aria-label="Close" title="Close" data-close>&times;</button>
+			<figure class="meme">
+				<img src="แพทองธาร-1-1.jpg" alt="Promotion" loading="lazy" />
+			</figure>
+		</div>
+	</div>
+
+	<script src="script.js"></script>
 </body>
 </html>
-
 
